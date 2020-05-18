@@ -21,13 +21,14 @@ const CheckoutForm = (props) => {
   return (
     <>
       <form onSubmit={handleSubmit}>
-        <h2>Checkout Form</h2>
+        <h2 data-testid='form-header'>Checkout Form</h2>
         <label>
           First Name:
           <input
             name="firstName"
             value={values.firstName}
             onChange={handleChanges}
+            data-testid="firstName"
           />
         </label>
         <label>
@@ -36,6 +37,7 @@ const CheckoutForm = (props) => {
             name="lastName"
             value={values.lastName}
             onChange={handleChanges}
+            data-testid='lastName'
           />
         </label>
         <label>
@@ -44,21 +46,22 @@ const CheckoutForm = (props) => {
             name="address"
             value={values.address}
             onChange={handleChanges}
+            data-testid='address'
           />
         </label>
         <label>
           City:
-          <input name="city" value={values.city} onChange={handleChanges} />
+          <input name="city" value={values.city} onChange={handleChanges} data-testid='city' />
         </label>
         <label>
           State:
-          <input name="state" value={values.state} onChange={handleChanges} />
+          <input name="state" value={values.state} onChange={handleChanges} data-testid='state' />
         </label>
         <label>
           Zip:
-          <input name="zip" value={values.zip} onChange={handleChanges} />
+          <input name="zip" value={values.zip} onChange={handleChanges} data-testid='zip' />
         </label>
-        <button>Checkout</button>
+        <button data-testid='checkout'>Checkout</button>
       </form>
 
       {showSuccessMessage && (
@@ -69,11 +72,11 @@ const CheckoutForm = (props) => {
           <p>Your new green friends will be shipped to:</p>
           <br />
           <br />
-          <p>
+          <p data-testid='success-name'>
             {values.firstName} {values.lastName}
           </p>
-          <p>{values.address}</p>
-          <p>
+          <p data-testid='success-address'>{values.address}</p>
+          <p data-testid='success-area'>
             {values.city}, {values.state} {values.zip}
           </p>
         </div>
