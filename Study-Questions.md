@@ -55,6 +55,8 @@
 
 Component lifecycle methods are pretty much the birth-action-death (oof, so dark) of how a component behaves. I think I pretty much described this in detail and this question an unnecessary repeat... like, how do I describe this any better than what I just did in question 2? The component, a piece of a React application, prepares all elements, renders them, looks for any changes, and end (or stay idle?) when everything has rendered properly. This question is annoying.
 
+But to add further into this in case I am misunderstanding this question, they are a series of events that happens from the birth to the death of a component. 
+
 
 **Q4. Define stateful logic.**
 
