@@ -1,16 +1,16 @@
-import React from "react";
+import React from "react"
 
 /********* DO NOT DO ANYTHING IN THIS COMPONENT *********/
 
 export default function ShoppingCart(props) {
-  const total = props.cart.reduce((sum, d) => sum + d.price, 0);
+  const total = props.cart.reduce((sum, d) => sum + d.price, 0)
   return (
     <div className="cart">
       {props.cart.map((plant) => (
         <div className="plant-card" key={plant.id}>
           <img className="plant-image" src={plant.img} alt={plant.name} />
           <div className="plant-details">
-            <h2 className="plant-name">{plant.name}</h2>
+            <h2 className="plant-name" data-testid="plantName">{plant.name}</h2>
             <p>${plant.price}</p>
             <button
               className="plant-button"
@@ -31,5 +31,5 @@ export default function ShoppingCart(props) {
         </button>
       </div>
     </div>
-  );
+  )
 }
